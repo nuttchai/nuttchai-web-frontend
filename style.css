@@ -288,9 +288,6 @@ section {
   .home .home-content .text-3 {
     font-size: 27px;
   }
-}
-
-@media (max-width: 418px) {
   .about .about-content .right .button {
     text-align: center;
   }
