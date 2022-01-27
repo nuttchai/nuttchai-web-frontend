@@ -1,6 +1,6 @@
 // Background animation
 VANTA.NET({
-  el: "#animation",
+  el: "#home",
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
