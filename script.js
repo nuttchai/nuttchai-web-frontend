@@ -28,4 +28,15 @@ $(document).ready(function () {
     $(".navbar .menu").toggleClass("active");
     $(".menu-btn i").toggleClass("active");
   });
+
+  $(".github-btn").on({
+    mouseenter: function () {
+      //stuff to do on mouse enter
+      $(".github-icon").attr("src", "/images/GitHub-Mark-32px.png");
+    },
+    mouseleave: function () {
+      //stuff to do on mouse leave
+      $(".github-icon").attr("src", "/images/GitHub-Mark-Light-32px.png");
+    },
+  });
 });
