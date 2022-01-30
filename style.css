@@ -395,9 +395,8 @@ section .title::after {
     margin-top: 20px;
   }
   .about .about-content .left .intro,
-  .about .about-content .right .languages,
-  .about .about-content .right .technologies {
-    margin-bottom: 20px;
+  .about .about-content .right .languages {
+    margin-bottom: 30px;
   }
   .portfolio .port-content .card {
     width: calc(50% - 10px);
