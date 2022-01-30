@@ -78,7 +78,8 @@
   font-family: "Ubuntu", sans-serif;
 }
 .home .max-width {
-  margin: auto 0 auto 40px;
+  width: 100%;
+  display: flex;
 }
 .home .home-content .text-1 {
   font-size: 27px;
@@ -160,7 +161,7 @@ section .title::after {
   border-radius: 15px;
 }
 .about .about-content .left .intro {
-  margin: 20px 0;
+  margin-top: 40px;
 }
 .about .about-content .text {
   font-size: 25px;
@@ -173,51 +174,51 @@ section .title::after {
 .about .about-content .left p {
   text-align: justify;
 }
-.about .about-content .left .button {
+.about .button {
   display: flex;
   justify-content: center;
 }
-.about .about-content .left a {
+.about a {
   display: inline-flex;
+  font-size: 20px;
+  padding: 15px 30px;
   color: #fff;
   font-weight: 500;
   text-align: center;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
-.about .about-content .left .cv {
+.about .cv {
   background: crimson;
-  font-size: 18px;
-  padding: 8px 18px;
   border: 2px solid crimson;
   margin-right: 5px;
 }
-.about .about-content .left .cv:hover {
+.about .cv:hover {
   color: crimson;
   background: none;
 }
-.about .about-content .left .github {
+.about .github {
   background: black;
-  font-size: 18px;
-  padding: 8px 18px;
   border: 2px solid black;
 }
-.about .about-content .left .github span {
+.about .github:hover {
+  color: black;
+  background: none;
+}
+.about .github span {
   max-height: 25px;
   max-width: 25px;
   margin-right: 5px;
 }
-.about .about-content .left .github span img {
+.about .github span img {
   height: 95%;
   width: 95%;
   object-fit: fill;
 }
-.about .about-content .left .github:hover {
-  color: black;
-  background: none;
-}
-.about .about-content .right .languages {
-  margin-bottom: 50px;
+.about .about-content .left .intro,
+.about .about-content .right .languages,
+.about .about-content .right .technologies {
+  margin-bottom: 40px;
 }
 .about .about-content .right .languages .bars {
   margin-bottom: 15px;
@@ -390,8 +391,13 @@ section .title::after {
     width: 325px;
     margin-bottom: 30px;
   }
-  .about .about-content .left a {
-    margin-bottom: 40px;
+  .about .about-content .left .intro {
+    margin-top: 20px;
+  }
+  .about .about-content .left .intro,
+  .about .about-content .right .languages,
+  .about .about-content .right .technologies {
+    margin-bottom: 20px;
   }
   .portfolio .port-content .card {
     width: calc(50% - 10px);
