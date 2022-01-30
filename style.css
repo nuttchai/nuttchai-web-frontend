@@ -323,11 +323,9 @@ section .title::after {
 .blogs .title::after {
   content: "readme.md";
 }
-.blogs .carousel {
-  color: rgb(19, 19, 19);
-}
 .blogs .carousel .card {
-  background: rgb(214, 214, 214);
+  color: #252934;
+  background: rgb(235, 235, 235);
   border-radius: 6px;
   padding: 25px 35px;
   text-align: center;
