@@ -178,7 +178,7 @@ section .title::after {
   display: flex;
   justify-content: center;
 }
-.about a {
+.about .button a {
   display: inline-flex;
   font-size: 20px;
   padding: 15px 30px;
@@ -423,7 +423,10 @@ section .title::after {
   .home .home-content .text-3 {
     font-size: 27px;
   }
-
+  .about .button a {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
   .portfolio .port-content .card {
     width: 100%;
   }
