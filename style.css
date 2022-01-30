@@ -325,7 +325,7 @@ section .title::after {
 }
 .blogs .carousel .card {
   color: #252934;
-  background: rgb(235, 235, 235);
+  background: crimson;
   border-radius: 6px;
   padding: 25px 35px;
   text-align: center;
