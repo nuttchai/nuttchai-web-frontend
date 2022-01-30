@@ -162,7 +162,7 @@ section .title::after {
 .about .about-content .left .intro {
   margin: 20px 0;
 }
-.about .about-content .left .text {
+.about .about-content .text {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -175,6 +175,7 @@ section .title::after {
 }
 .about .about-content .left .button {
   display: flex;
+  justify-content: center;
 }
 .about .about-content .left a {
   display: inline-flex;
@@ -215,26 +216,29 @@ section .title::after {
   color: black;
   background: none;
 }
-.about .about-content .right .bars {
+.about .about-content .right .languages {
+  margin-bottom: 50px;
+}
+.about .about-content .right .languages .bars {
   margin-bottom: 15px;
 }
-.about .about-content .right .info {
+.about .about-content .right .languages .info {
   display: flex;
   margin-bottom: 5px;
   align-items: center;
   justify-content: space-between;
 }
-.about .about-content .right span {
+.about .about-content .right .languages .info span {
   font-weight: 500;
   font-size: 18px;
 }
-.about .about-content .right .line {
+.about .about-content .right .languages .line {
   height: 5px;
   width: 100%;
   background: lightgrey;
   position: relative;
 }
-.about .about-content .right .line::before {
+.about .about-content .right .languages .line::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -242,14 +246,32 @@ section .title::after {
   top: 0;
   background: crimson;
 }
+.about-content .right .python::before {
+  width: 80%;
+}
+.about-content .right .js::before {
+  width: 80%;
+}
+.about-content .right .csharp::before {
+  width: 70%;
+}
 .about-content .right .html::before {
-  width: 90%;
+  width: 65%;
 }
 .about-content .right .css::before {
   width: 60%;
 }
-.about-content .right .js::before {
-  width: 80%;
+.about-content .right .go::before {
+  width: 50%;
+}
+.about-content .right .java::before {
+  width: 50%;
+}
+.about .about-content .right .technologies img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  margin: 0 5px 5px 5px;
 }
 
 /* portfolio section styling */
@@ -371,9 +393,6 @@ section .title::after {
   .about .about-content .left a {
     margin-bottom: 40px;
   }
-  .about .about-content .right {
-    flex: 100%;
-  }
   .portfolio .port-content .card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
@@ -399,9 +418,7 @@ section .title::after {
   .home .home-content .text-3 {
     font-size: 27px;
   }
-  .about .about-content .left .button {
-    justify-content: center;
-  }
+
   .portfolio .port-content .card {
     width: 100%;
   }
