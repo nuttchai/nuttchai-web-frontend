@@ -23,12 +23,14 @@ $(document).ready(function () {
       $(".navbar").removeClass("sticky");
     }
   });
+
   // toggle menu/navbar script
   $(".menu-btn").click(function () {
     $(".navbar .menu").toggleClass("active");
     $(".menu-btn i").toggleClass("active");
   });
 
+  // hover on github button to check switch github icon
   $(".github").on({
     mouseenter: function () {
       //stuff to do on mouse enter
@@ -39,4 +41,49 @@ $(document).ready(function () {
       $(".github-icon").attr("src", "/images/GitHub-Mark-Light-32px.png");
     },
   });
+
+  // owl carousel script
+  // Empty object where we can store current item's index before drag
+  var transient = {};
+
+  $(".owl-carousel").owlCarousel({
+    margin: 20,
+    autoplay: true,
+    autoplayTimeOut: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false,
+      },
+      600: {
+        items: 2,
+        nav: false,
+      },
+      1000: {
+        items: 3,
+        nav: false,
+      },
+    },
+    slideBy: "page",
+    onDrag: onDrag.bind(transient),
+    onDragged: onDragged.bind(transient),
+  });
+
+  function onDrag(event) {
+    this.initialCurrent = event.relatedTarget.current();
+  }
+
+  function onDragged(event) {
+    var owl = event.relatedTarget;
+    var draggedCurrent = owl.current();
+
+    if (draggedCurrent > this.initialCurrent) {
+      owl.current(this.initialCurrent);
+      owl.next();
+    } else if (draggedCurrent < this.initialCurrent) {
+      owl.current(this.initialCurrent);
+      owl.prev();
+    }
+  }
 });

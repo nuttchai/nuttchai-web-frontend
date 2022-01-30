@@ -98,7 +98,7 @@
   font-weight: 500;
 }
 
-/* global styling */
+/* similar styling */
 section {
   padding: 100px 0;
 }
@@ -133,7 +133,8 @@ section .title::after {
   transform: translateX(-50%);
 }
 .about,
-.portfolio {
+.portfolio,
+.blogs {
   font-family: "Poppins", sans-serif;
 }
 .about .about-content,
@@ -198,11 +199,11 @@ section .title::after {
   background: none;
 }
 .about .github {
-  background: black;
-  border: 2px solid black;
+  background: #171516;
+  border: 2px solid #171516;
 }
 .about .github:hover {
-  color: black;
+  color: #171516;
   background: none;
 }
 .about .github span {
@@ -248,10 +249,10 @@ section .title::after {
   background: crimson;
 }
 .about-content .right .python::before {
-  width: 80%;
+  width: 75%;
 }
 .about-content .right .js::before {
-  width: 80%;
+  width: 75%;
 }
 .about-content .right .csharp::before {
   width: 70%;
@@ -260,7 +261,7 @@ section .title::after {
   width: 65%;
 }
 .about-content .right .css::before {
-  width: 60%;
+  width: 55%;
 }
 .about-content .right .go::before {
   width: 50%;
@@ -285,7 +286,7 @@ section .title::after {
 }
 .portfolio .title::after {
   background: #252934;
-  content: "project";
+  content: "projects";
 }
 .portfolio .port-content .card {
   width: calc(33% - 10px);
@@ -318,6 +319,71 @@ section .title::after {
   font-weight: 500;
 }
 
+/* blogs section styling */
+.blogs .title::after {
+  content: "readme.md";
+}
+.blogs .carousel {
+  color: rgb(19, 19, 19);
+}
+.blogs .carousel .card {
+  background: rgb(214, 214, 214);
+  border-radius: 6px;
+  padding: 25px 35px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.blogs .carousel .card:hover {
+  background: #252934;
+}
+.blogs .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.blogs .carousel .card:hover .box {
+  transform: scale(1.05);
+  color: #fff;
+}
+.blogs .carousel .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+.blogs .carousel .card img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #252934;
+  transition: all 0.3s ease;
+}
+.blogs .carousel .card:hover img {
+  border-color: #fff;
+}
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #252934 !important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active {
+  width: 30px;
+  border-radius: 17px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+  background: #252934 !important;
+}
 /* responsive media query start */
 @media (max-width: 1330px) {
   .home .max-width {
