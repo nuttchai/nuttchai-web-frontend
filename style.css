@@ -166,7 +166,7 @@ section .title::after {
 .about .about-content .text {
   font-size: 25px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .about .about-content .left .text span {
   color: crimson;
@@ -392,7 +392,7 @@ section .title::after {
     margin-bottom: 30px;
   }
   .about .about-content .left .intro {
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .about .about-content .left .intro,
   .about .about-content .right .languages {
