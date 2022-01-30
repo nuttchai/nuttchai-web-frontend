@@ -29,7 +29,7 @@ $(document).ready(function () {
     $(".menu-btn i").toggleClass("active");
   });
 
-  $(".github-btn").on({
+  $(".github").on({
     mouseenter: function () {
       //stuff to do on mouse enter
       $(".github-icon").attr("src", "/images/GitHub-Mark-32px.png");

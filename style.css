@@ -132,13 +132,11 @@ section .title::after {
   transform: translateX(-50%);
 }
 .about,
-.portfolio,
-.skills {
+.portfolio {
   font-family: "Poppins", sans-serif;
 }
 .about .about-content,
-.portfolio .port-content,
-.skills .skills-content {
+.portfolio .port-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -149,45 +147,109 @@ section .title::after {
 .about .title::after {
   content: "hello world!";
 }
-.about .about-content .left {
-  width: 45%;
+.about .about-content .column {
+  width: calc(50% - 30px);
 }
-.about .about-content .left img {
+.about .about-content .left .profile {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
   height: 450px;
   width: 375px;
   object-fit: cover;
   border-radius: 15px;
 }
-.about .about-content .right {
-  width: 50%;
+.about .about-content .left .intro {
+  margin: 20px 0;
 }
-.about .about-content .right .text {
+.about .about-content .left .text {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-.about .about-content .right .text span {
+.about .about-content .left .text span {
   color: crimson;
 }
-.about .about-content .right p {
+.about .about-content .left p {
   text-align: justify;
 }
-.about .about-content .right a {
-  display: inline-block;
-  background: crimson;
+.about .about-content .left .button {
+  display: flex;
+}
+.about .about-content .left a {
+  display: inline-flex;
   color: #fff;
-  font-size: 18px;
   font-weight: 500;
-  margin-top: 20px;
-  padding: 10px 20px;
   text-align: center;
   border-radius: 6px;
-  border: 2px solid crimson;
   transition: all 0.3s ease;
 }
-.about .about-content .right a:hover {
+.about .about-content .left .cv {
+  background: crimson;
+  font-size: 18px;
+  padding: 8px 18px;
+  border: 2px solid crimson;
+  margin-right: 5px;
+}
+.about .about-content .left .cv:hover {
   color: crimson;
   background: none;
+}
+.about .about-content .left .github {
+  background: black;
+  font-size: 18px;
+  padding: 8px 18px;
+  border: 2px solid black;
+}
+.about .about-content .left .github span {
+  max-height: 25px;
+  max-width: 25px;
+  margin-right: 5px;
+}
+.about .about-content .left .github span img {
+  height: 95%;
+  width: 95%;
+  object-fit: fill;
+}
+.about .about-content .left .github:hover {
+  color: black;
+  background: none;
+}
+.about .about-content .right .bars {
+  margin-bottom: 15px;
+}
+.about .about-content .right .info {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+.about .about-content .right span {
+  font-weight: 500;
+  font-size: 18px;
+}
+.about .about-content .right .line {
+  height: 5px;
+  width: 100%;
+  background: lightgrey;
+  position: relative;
+}
+.about .about-content .right .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: crimson;
+}
+.about-content .right .html::before {
+  width: 90%;
+}
+.about-content .right .css::before {
+  width: 60%;
+}
+.about-content .right .js::before {
+  width: 80%;
 }
 
 /* portfolio section styling */
@@ -233,8 +295,136 @@ section .title::after {
   font-weight: 500;
 }
 
+/* responsive media query start */
+@media (max-width: 1330px) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 400px;
+    width: 325px;
+  }
+}
+
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 950px) {
+  .menu-btn {
+    display: block;
+    z-index: 3;
+  }
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: 100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding: 80px 0;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  .home .home-content .text-2 {
+    font-size: 70px;
+  }
+  .home .home-content .text-3 {
+    font-size: 35px;
+  }
+  section {
+    padding: 70px 0;
+  }
+  section .title {
+    margin-bottom: 60px;
+  }
+  .max-width {
+    max-width: 800px;
+  }
+  .about .about-content .column {
+    width: 100%;
+  }
+  .about .about-content .left .profile {
+    height: 350px;
+    width: 325px;
+    margin-bottom: 30px;
+  }
+  .about .about-content .left a {
+    margin-bottom: 40px;
+  }
+  .about .about-content .right {
+    flex: 100%;
+  }
+  .portfolio .port-content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+  .home .home-content .text-2 {
+    font-size: 60px;
+  }
+  .home .home-content .text-3 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .home-content .text-2 {
+    font-size: 50px;
+  }
+  .home .home-content .text-3 {
+    font-size: 27px;
+  }
+  .about .about-content .left .button {
+    justify-content: center;
+  }
+  .portfolio .port-content .card {
+    width: 100%;
+  }
+}
+
+/* Old styling (about & skills section) */
+/* Global styling */
+/* .about,
+.portfolio,
+.skills {
+  font-family: "Poppins", sans-serif;
+}
+.about .about-content,
+.portfolio .port-content,
+.skills .skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+} */
+
 /* skills section styling */
-.skills .title::after {
+/* .skills .title::after {
   content: "tech & tool";
 }
 .skills .skills-content .column {
@@ -310,123 +500,12 @@ section .title::after {
 }
 .skills-content .right .js::before {
   width: 80%;
-}
+} */
 
-/* responsive media query start */
-@media (max-width: 1330px) {
-  .home .max-width {
-    margin-left: 0px;
-  }
-}
-
-@media (max-width: 1104px) {
-  .about .about-content .left img {
-    height: 400px;
-    width: 325px;
-  }
-}
-
-@media (max-width: 991px) {
-  .max-width {
-    padding: 0 50px;
-  }
-}
-
-@media (max-width: 950px) {
-  .menu-btn {
-    display: block;
-    z-index: 3;
-  }
-  .menu-btn i.active:before {
-    content: "\f00d";
-  }
-  .navbar .menu {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    left: 100%;
-    top: 0;
-    background: #111;
-    text-align: center;
-    padding: 80px 0;
-    transition: all 0.3s ease;
-  }
-  .navbar .menu.active {
-    left: 0;
-  }
-  .navbar .menu li {
-    display: block;
-  }
-  .navbar .menu li a {
-    display: inline-block;
-    margin: 20px 0;
-    font-size: 25px;
-  }
-  .home .home-content .text-2 {
-    font-size: 70px;
-  }
-  .home .home-content .text-3 {
-    font-size: 35px;
-  }
-  section {
-    padding: 70px 0;
-  }
-  section .title {
-    margin-bottom: 60px;
-  }
-  .max-width {
-    max-width: 800px;
-  }
-  .about .about-content .column {
-    width: 100%;
-  }
-  .about .about-content .left {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-  }
-  .about .about-content .left img {
-    margin-bottom: 60px;
-  }
-  .about .about-content .right {
-    flex: 100%;
-  }
-  .about .about-content .right a {
-    margin-top: 15px;
-  }
-  .portfolio .port-content .card {
-    width: calc(50% - 10px);
-    margin-bottom: 20px;
-  }
+/* responsive view */
+/* @media (max-width: 950px) {
   .skills .skills-content .column {
     width: 100%;
     margin-bottom: 35px;
   }
-}
-
-@media (max-width: 690px) {
-  .max-width {
-    padding: 0 23px;
-  }
-  .home .home-content .text-2 {
-    font-size: 60px;
-  }
-  .home .home-content .text-3 {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 500px) {
-  .home .home-content .text-2 {
-    font-size: 50px;
-  }
-  .home .home-content .text-3 {
-    font-size: 27px;
-  }
-  .about .about-content .right .button {
-    text-align: center;
-  }
-  .portfolio .port-content .card {
-    width: 100%;
-  }
-}
+} */
