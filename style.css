@@ -615,6 +615,14 @@ section.social-media {
   .contact .contact-content .left {
     margin-bottom: 35px;
   }
+  .social-media .icon-container {
+    margin-bottom: 20px;
+  }
+  .social-media .icon-container a div {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+  }
 }
 
 @media (max-width: 690px) {
