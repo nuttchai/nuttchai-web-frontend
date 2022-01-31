@@ -103,6 +103,7 @@ html {
 
 /* similar styling */
 section {
+  position: relative;
   padding: 100px 0;
 }
 section .title {
@@ -486,7 +487,7 @@ section .title::after {
 
 /* social-media section styling */
 section.social-media {
-  padding: 75px 0 50px 0;
+  padding: 70px 0 50px 0 !important;
 }
 .social-media {
   background: #1c242f;
@@ -494,7 +495,7 @@ section.social-media {
 .social-media .icon-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 .social-media .icon-container a div {
   display: flex;
@@ -519,7 +520,7 @@ section.social-media {
 .social-media .text {
   text-align: center;
   font-family: "Quicksand", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.5px;
   color: #fff;
 }
@@ -528,12 +529,6 @@ section.social-media {
 }
 
 /* responsive media query start */
-@media (max-width: 1330px) {
-  .home .max-width {
-    margin-left: 0px;
-  }
-}
-
 @media (max-width: 1104px) {
   .about .about-content .left img {
     height: 400px;
@@ -586,6 +581,9 @@ section.social-media {
   section {
     padding: 70px 0;
   }
+  section.social-media {
+    padding: 25px 0 25px 0 !important;
+  }
   section .title {
     margin-bottom: 60px;
   }
@@ -611,9 +609,10 @@ section.social-media {
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
-
   .contact .contact-content .column {
     width: 100%;
+  }
+  .contact .contact-content .left {
     margin-bottom: 35px;
   }
 }
@@ -643,5 +642,108 @@ section.social-media {
   }
   .portfolio .port-content .card {
     width: 100%;
+  }
+}
+
+/* CURVE styling */
+body {
+  overflow-x: hidden;
+}
+/* These sections are affected by curve */
+section.about {
+  padding-bottom: 200px;
+}
+section.portfolio,
+section.blogs {
+  padding: 200px 0;
+}
+.curve,
+.curve-flipped {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  bottom: 0;
+}
+.curve::before,
+.curve-flipped::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #252934;
+}
+.curve::after,
+.curve-flipped::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  z-index: 1;
+  background-color: #fff;
+}
+.curve::before,
+.curve-flipped::before {
+  transform: translate(85%, 60%);
+}
+.curve::after,
+.curve-flipped::after {
+  transform: translate(-4%, 40%);
+}
+
+/* add curve ontop of contact header */
+.blogs.contact-curve .carousel {
+  /* Add extra margin-bottom to avoid the curve */
+  margin-bottom: 100px;
+}
+.blogs.contact-curve::after {
+  content: "";
+  border-top-left-radius: 60% 100%;
+  border-top-right-radius: 60% 100%;
+  position: absolute;
+  height: 25%;
+  width: 100%;
+  background-color: #252934;
+  z-index: -1;
+}
+.contact.contact-curve {
+  /* Make contact part reach to the top of the section */
+  padding-top: 0;
+  /* For navigation, prevent navigation bar overlap the title */
+  scroll-margin-top: 200px;
+}
+
+@media (max-width: 950px) {
+  section.about {
+    padding-bottom: 150px;
+  }
+  section.portfolio {
+    padding: 150px 0;
+  }
+  section.blogs {
+    padding: 150px 0 70px 0;
+  }
+  .curve,
+  .curve-flipped {
+    height: 150px;
+  }
+}
+
+@media (max-width: 690px) {
+  section.about {
+    padding-bottom: 100px;
+  }
+  section.portfolio {
+    padding: 100px 0;
+  }
+  section.blogs {
+    padding-top: 100px;
+  }
+  .curve,
+  .curve-flipped {
+    height: 100px;
   }
 }

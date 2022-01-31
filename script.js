@@ -1,4 +1,4 @@
-// Background animation
+// BACKGROUND ANIMATION
 VANTA.NET({
   el: "#home",
   mouseControls: true,
@@ -14,23 +14,8 @@ VANTA.NET({
   showDots: false,
 });
 
-// home section
 $(document).ready(function () {
-  $(window).scroll(function () {
-    if (this.scrollY > 20) {
-      $(".navbar").addClass("sticky");
-    } else {
-      $(".navbar").removeClass("sticky");
-    }
-  });
-
-  // toggle menu/navbar script
-  $(".menu-btn").click(function () {
-    $(".navbar .menu").toggleClass("active");
-    $(".menu-btn i").toggleClass("active");
-  });
-
-  // hover on github button to check switch the icon
+  //#region CHANGE LOGO WHEN HOVER BUTTON
   $(".github").on({
     mouseenter: function () {
       $(".github-icon").attr("src", "/images/GitHub-Mark-32px.png");
@@ -90,7 +75,9 @@ $(document).ready(function () {
       $(".footer-medium-icon").attr("src", "/images/social-media/medium.png");
     },
   });
+  //#endregion
 
+  //#region OWL CAROUSEL
   // owl carousel script
   // Empty object where we can store current item's index before drag
   var transient = {};
@@ -109,7 +96,7 @@ $(document).ready(function () {
         items: 2,
         nav: false,
       },
-      1000: {
+      951: {
         items: 3,
         nav: false,
       },
@@ -135,6 +122,40 @@ $(document).ready(function () {
       owl.prev();
     }
   }
+  //#endregion
 
+  //#region RESET FORM WHEN SUBMIT
   $("#contact-form")[0].reset();
+  //#endregion
+
+  //#region NAVIGATION BAR
+  $(window).scroll(function () {
+    if (this.scrollY > 20) {
+      $(".navbar").addClass("sticky");
+    } else {
+      $(".navbar").removeClass("sticky");
+    }
+  });
+  //#endregion
+
+  //#region TOGGLE MENU
+  $(".menu-btn").click(function () {
+    $(".navbar .menu").toggleClass("active");
+    $(".menu-btn i").toggleClass("active");
+  });
+  //#endregion
 });
+
+//#region REMOVE CONTACT CURVE
+$(window)
+  .resize(function () {
+    if ($(window).width() <= 950) {
+      $("#blogs").removeClass("contact-curve");
+      $("#contact").removeClass("contact-curve");
+    } else {
+      $("#blogs").addClass("contact-curve");
+      $("#contact").addClass("contact-curve");
+    }
+  })
+  .resize();
+//#endregion
