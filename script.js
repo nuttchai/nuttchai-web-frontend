@@ -144,9 +144,9 @@ $(document).ready(function () {
   var typed = new Typed(".typing", {
     strings: ["Software Engineer", "Full Stack Developer", "Full Stack Grad!"],
     startDelay: 1250,
-    backDelay: 300,
-    typeSpeed: 60,
-    backSpeed: 40,
+    backDelay: 750,
+    typeSpeed: 40,
+    backSpeed: 50,
   });
   //#endregion
 
