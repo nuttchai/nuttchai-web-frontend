@@ -143,8 +143,10 @@ $(document).ready(function () {
   //#region TYPING ANIMATION
   var typed = new Typed(".typing", {
     strings: ["Software Engineer", "Full Stack Developer", "Full Stack Grad!"],
-    typeSpeed: 10,
-    backSpeed: 40,
+    startDelay: 1250,
+    backDelay: 300,
+    typeSpeed: 0.5,
+    backSpeed: 30,
   });
   //#endregion
 
