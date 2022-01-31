@@ -146,7 +146,7 @@ $(document).ready(function () {
     startDelay: 1250,
     backDelay: 750,
     typeSpeed: 20,
-    backSpeed: 60,
+    backSpeed: 50,
   });
   //#endregion
 
