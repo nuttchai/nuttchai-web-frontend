@@ -30,15 +30,64 @@ $(document).ready(function () {
     $(".menu-btn i").toggleClass("active");
   });
 
-  // hover on github button to check switch github icon
+  // hover on github button to check switch the icon
   $(".github").on({
     mouseenter: function () {
-      //stuff to do on mouse enter
       $(".github-icon").attr("src", "/images/GitHub-Mark-32px.png");
     },
     mouseleave: function () {
-      //stuff to do on mouse leave
       $(".github-icon").attr("src", "/images/GitHub-Mark-Light-32px.png");
+    },
+  });
+
+  $(".footer-facebook").on({
+    mouseenter: function () {
+      $(".footer-facebook-icon").attr(
+        "src",
+        "/images/social-media/facebook-hover.png"
+      );
+    },
+    mouseleave: function () {
+      $(".footer-facebook-icon").attr(
+        "src",
+        "/images/social-media/facebook.png"
+      );
+    },
+  });
+  $(".footer-linkedin").on({
+    mouseenter: function () {
+      $(".footer-linkedin-icon").attr(
+        "src",
+        "/images/social-media/linkedin-hover.png"
+      );
+    },
+    mouseleave: function () {
+      $(".footer-linkedin-icon").attr(
+        "src",
+        "/images/social-media/linkedin.png"
+      );
+    },
+  });
+  $(".footer-github").on({
+    mouseenter: function () {
+      $(".footer-github-icon").attr("src", "/images/GitHub-Mark-32px.png");
+    },
+    mouseleave: function () {
+      $(".footer-github-icon").attr(
+        "src",
+        "/images/GitHub-Mark-Light-32px.png"
+      );
+    },
+  });
+  $(".footer-medium").on({
+    mouseenter: function () {
+      $(".footer-medium-icon").attr(
+        "src",
+        "/images/social-media/medium-hover.png"
+      );
+    },
+    mouseleave: function () {
+      $(".footer-medium-icon").attr("src", "/images/social-media/medium.png");
     },
   });
 

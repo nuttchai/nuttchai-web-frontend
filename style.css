@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&?family=Quicksand:wght@300&display=swap");
 
 * {
   margin: 0;
@@ -482,6 +482,49 @@ section .title::after {
 .contact .right form .button button:hover {
   color: crimson;
   background: none;
+}
+
+/* social-media section styling */
+section.social-media {
+  padding: 75px 0 50px 0;
+}
+.social-media {
+  background: #1c242f;
+}
+.social-media .icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.social-media .icon-container a div {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  background-color: #262f38;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin: 0 15px;
+  transition: all 0.3s ease;
+}
+.social-media .icon-container a div:hover {
+  background-color: #fff;
+  transform: scale(1.2);
+}
+.social-media .icon-container div img {
+  width: 50%;
+  height: 50%;
+}
+.social-media .text {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+.social-media .text span {
+  color: crimson;
 }
 
 /* responsive media query start */
