@@ -145,8 +145,8 @@ $(document).ready(function () {
     strings: ["Software Engineer", "Full Stack Developer", "Full Stack Grad!"],
     startDelay: 1250,
     backDelay: 750,
-    typeSpeed: 20,
-    backSpeed: 50,
+    typeSpeed: 15,
+    backSpeed: 40,
   });
   //#endregion
 
