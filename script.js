@@ -143,6 +143,14 @@ $(document).ready(function () {
     $(".navbar .menu").toggleClass("active");
     $(".menu-btn i").toggleClass("active");
   });
+
+  $(".menu a").click(function () {
+    let isMobile = $(".navbar .menu").hasClass("active");
+    if (isMobile) {
+      $(".navbar .menu").removeClass("active");
+      $(".menu-btn i").removeClass("active");
+    }
+  });
   //#endregion
 });
 
