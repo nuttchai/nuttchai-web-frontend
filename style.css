@@ -23,6 +23,28 @@ html {
   cursor: pointer;
   display: none;
 }
+.scroll-up-btn {
+  position: fixed;
+  z-index: 4;
+  height: 45px;
+  width: 42px;
+  background: crimson;
+  right: 30px;
+  bottom: 30px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /* navbar styling */
 .navbar {
@@ -487,7 +509,7 @@ section .title::after {
 
 /* social-media section styling */
 section.social-media {
-  padding: 70px 0 50px 0 !important;
+  padding: 40px 0 !important;
 }
 .social-media {
   background: #1c242f;
@@ -586,7 +608,7 @@ section.social-media {
     scroll-margin-top: 30px;
   }
   section.social-media {
-    padding: 25px 0 25px 0 !important;
+    padding: 25px 0 !important;
   }
   section .title {
     margin-bottom: 60px;

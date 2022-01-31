@@ -128,13 +128,29 @@ $(document).ready(function () {
   $("#contact-form")[0].reset();
   //#endregion
 
-  //#region NAVIGATION BAR
+  //#region NAVIGATION BAR and SCROLL UP BTN
   $(window).scroll(function () {
     if (this.scrollY > 20) {
       $(".navbar").addClass("sticky");
+      $(".scroll-up-btn").addClass("show");
     } else {
       $(".navbar").removeClass("sticky");
+      $(".scroll-up-btn").removeClass("show");
     }
+  });
+  //#endregion
+
+  //#region TYPING ANIMATION
+  var typed = new Typed(".typing", {
+    strings: ["Software Engineer", "Full Stack Developer", "Full Stack Grad!"],
+    typeSpeed: 10,
+    backSpeed: 40,
+  });
+  //#endregion
+
+  //#region slide-up script
+  $(".scroll-up-btn").click(function () {
+    $("html").animate({ scrollTop: 0 });
   });
   //#endregion
 
