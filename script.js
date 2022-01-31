@@ -1,4 +1,4 @@
-// BACKGROUND ANIMATION
+//#region BACKGROUND ANIMATION
 VANTA.NET({
   el: "#home",
   mouseControls: true,
@@ -13,6 +13,7 @@ VANTA.NET({
   points: 18.0,
   showDots: false,
 });
+//#endregion
 
 $(document).ready(function () {
   //#region CHANGE LOGO WHEN HOVER BUTTON
@@ -24,7 +25,6 @@ $(document).ready(function () {
       $(".github-icon").attr("src", "/images/GitHub-Mark-Light-32px.png");
     },
   });
-
   $(".footer-facebook").on({
     mouseenter: function () {
       $(".footer-facebook-icon").attr(

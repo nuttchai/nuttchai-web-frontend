@@ -94,6 +94,105 @@ html {
   color: #252934;
 }
 
+/* animation (home page) styling */
+/* .animation-home {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #252934;
+}
+.animation-box div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 4px solid;
+  border-radius: 100%;
+}
+.animation-box div:nth-child(1) {
+  top: 12%;
+  left: 42%;
+  border-color: lightcoral;
+  animation: animate 9.2s linear infinite;
+}
+.animation-box div:nth-child(2) {
+  top: 90%;
+  left: 40%;
+  border-color: lightcyan;
+  animation: animate 5.9s linear infinite;
+}
+.animation-box div:nth-child(3) {
+  top: 17%;
+  left: 6%;
+  border-color: lightgray;
+  animation: animate 9s linear infinite;
+}
+.animation-box div:nth-child(4) {
+  top: 20%;
+  left: 55%;
+  border-color: lightpink;
+  animation: animate 4.6s linear infinite;
+}
+.animation-box div:nth-child(5) {
+  top: 76%;
+  left: 10%;
+  border-color: lightsalmon;
+  animation: animate 6.9s linear infinite;
+}
+.animation-box div:nth-child(6) {
+  top: 80%;
+  left: 60%;
+  border-color: lightseagreen;
+  animation: animate 8.4s linear infinite;
+}
+.animation-box div:nth-child(7) {
+  top: 60%;
+  left: 80%;
+  border-color: lightskyblue;
+  animation: animate 5.7s linear infinite;
+}
+.animation-box div:nth-child(8) {
+  top: 32%;
+  left: 25%;
+  border-color: lightslategray;
+  animation: animate 6.3s linear infinite;
+}
+.animation-box div:nth-child(9) {
+  top: 95%;
+  left: 10%;
+  border-color: lightsteelblue;
+  animation: animate 13.2s linear infinite;
+}
+.animation-box div:nth-child(10) {
+  top: 20%;
+  left: 85%;
+  border-color: lightyellow;
+  animation: animate 7.7s linear infinite;
+}
+.animation-box div:nth-child(11) {
+  top: 90%;
+  left: 90%;
+  border-color: linen;
+  animation: animate 12s linear infinite;
+}
+.animation-box div:nth-child(12) {
+  top: 40%;
+  left: 63%;
+  border-color: lavender;
+  animation: animate 10.2s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.7) translateY(-200px);
+    opacity: 1;
+  }
+} */
+
 /* home section styling */
 .home {
   display: flex;
@@ -283,7 +382,7 @@ section .title::after {
   width: 75%;
 }
 .about-content .right .csharp::before {
-  width: 70%;
+  width: 65%;
 }
 .about-content .right .html::before {
   width: 65%;
