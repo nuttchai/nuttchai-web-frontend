@@ -581,6 +581,10 @@ section.social-media {
   section {
     padding: 70px 0;
   }
+  section.contact,
+  section.about {
+    scroll-margin-top: 30px;
+  }
   section.social-media {
     padding: 25px 0 25px 0 !important;
   }
