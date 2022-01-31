@@ -86,4 +86,6 @@ $(document).ready(function () {
       owl.prev();
     }
   }
+
+  $("#contact-form")[0].reset();
 });
