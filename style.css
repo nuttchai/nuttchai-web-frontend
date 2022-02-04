@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&?family=Quicksand:wght@300&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Murecho:wght@400&family=Poppins:wght@400;500;600&family=Quicksand:wght@300;400;500&family=Ubuntu:wght@400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -379,7 +378,7 @@ section .title::after {
   width: 75%;
 }
 .about-content .right .js::before {
-  width: 75%;
+  width: 70%;
 }
 .about-content .right .csharp::before {
   width: 65%;
@@ -433,7 +432,7 @@ section .title::after {
   transition: all 0.3s ease;
 }
 .portfolio .port-content .card:hover .box {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 .portfolio .port-content .card i {
   font-size: 50px;
@@ -447,48 +446,83 @@ section .title::after {
   font-size: 25px;
   font-weight: 500;
 }
-
+.portfolio .port-content .card .project-btn {
+  display: none;
+  transition: all 3s ease;
+}
+.portfolio .port-content .card .project-btn a {
+  display: block;
+  color: #fff;
+  background-color: rgb(59, 59, 59);
+  width: 47%;
+  font-size: 16px;
+  padding: 10px 25px;
+}
+.portfolio .port-content .card:hover .project-btn {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-around;
+}
 /* blogs section styling */
 .blogs .title::after {
   content: "readme.md";
 }
+.blogs .header {
+  font-family: "Murecho", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 45px;
+}
 .blogs .carousel .card {
-  color: #252934;
-  background: rgb(235, 235, 235);
+  color: #fff;
+  background: #252934;
   border-radius: 6px;
   padding: 25px 35px;
-  text-align: center;
+  text-align: left;
+  border: 1px solid #252934;
   transition: all 0.3s ease;
-}
-.blogs .carousel .card:hover {
-  background: #252934;
 }
 .blogs .carousel .card .box {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
+  margin: 20px 0;
   transition: all 0.3s ease;
+}
+.blogs .carousel .card .text {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.blogs .carousel .card .date {
+  font-size: 12px;
+  font-weight: 300;
+}
+.blogs .carousel .card .bar {
+  margin: 10px 0px;
+  background: lightskyblue;
+  height: 3px;
+  width: 75%;
+}
+.blogs .carousel .card p {
+  font-size: 14px;
 }
 .blogs .carousel .card:hover .box {
   transform: scale(1.05);
+}
+.blogs .carousel .card:hover .bar {
+  background: crimson;
+}
+.blogs .carousel .card i {
+  font-size: 80px;
   color: #fff;
+  transition: color 0.3s ease;
+  margin-bottom: 15px;
 }
-.blogs .carousel .card .text {
-  font-size: 20px;
-  font-weight: 500;
-  margin: 10px 0 7px 0;
-}
-.blogs .carousel .card img {
-  height: 150px;
-  width: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid #252934;
-  transition: all 0.3s ease;
-}
-.blogs .carousel .card:hover img {
-  border-color: #fff;
+.blogs .carousel .card:hover i {
+  color: crimson;
 }
 .owl-dots {
   text-align: center;
@@ -523,10 +557,11 @@ section .title::after {
 .contact .contact-content .text {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .contact .contact-content .left p {
   text-align: justify;
+  margin-bottom: 30px;
 }
 .contact .contact-content .left .icons {
   margin: 10px 0;
@@ -642,6 +677,7 @@ section.social-media {
   text-align: center;
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
+  font-weight: 300;
   letter-spacing: 0.5px;
   color: #fff;
 }
@@ -738,7 +774,10 @@ section.social-media {
     width: 100%;
   }
   .contact .contact-content .left {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+  }
+  .contact .contact-content .left p {
+    margin-bottom: 20px;
   }
   .social-media .icon-container {
     margin-bottom: 20px;
@@ -759,6 +798,18 @@ section.social-media {
   }
   .home .home-content .text-3 {
     font-size: 32px;
+  }
+}
+
+@media (max-width: 589px) {
+  .blogs .carousel .card {
+    text-align: center;
+  }
+  .blogs .carousel .card .box {
+    align-items: center;
+  }
+  .blogs .carousel .card .bar {
+    margin: 20px;
   }
 }
 
