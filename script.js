@@ -170,10 +170,6 @@ $(document).ready(function () {
     }
   });
   //#endregion
-
-  //#region HOVER PROJECT
-  $(".menu-btn").hover(function () {
-  //#endregion
 });
 
 //#region REMOVE CONTACT CURVE
