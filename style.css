@@ -238,7 +238,7 @@ section .title {
 section .title::before {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 50%;
   width: 180px;
   height: 3px;
@@ -418,15 +418,15 @@ section .title::after {
 }
 .portfolio .port-content .card {
   width: calc(33% - 10px);
-  background: #222;
+  background: #252934;
   text-align: center;
   border-radius: 6px;
-  padding: 20px 25px;
+  padding: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .portfolio .port-content .card:hover {
-  background: crimson;
+  background: #222;
 }
 .portfolio .port-content .card .box {
   transition: all 0.3s ease;
@@ -435,33 +435,82 @@ section .title::after {
   transform: scale(1.02);
 }
 .portfolio .port-content .card i {
-  font-size: 50px;
-  color: crimson;
+  font-size: 70px;
+  color: #fff;
   transition: color 0.3s ease;
 }
 .portfolio .port-content .card:hover i {
-  color: #fff;
+  color: crimson;
 }
-.portfolio .port-content .card .text {
-  font-size: 25px;
+.portfolio .port-content .card .detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio .port-content .card .title {
+  font-size: 22px;
   font-weight: 500;
+  margin: 18px 0;
+}
+.portfolio .port-content .card .title::before {
+  background: crimson;
+}
+.portfolio .port-content .card .title::after {
+  content: "hover me!";
+  font-size: 15px;
+  width: 80px;
+  transition: all 0.3s ease;
+}
+.portfolio .port-content .card:hover .title::after {
+  background: #222;
+  width: 90px;
+}
+.portfolio .port-content .card:hover .kinkhorn.title::after,
+.portfolio .port-content .card:hover .learning-hub.title::after {
+  content: "Q1&2 2021";
+}
+.portfolio .port-content .card:hover .hiewkao.title::after {
+  content: "Q3&4 2020";
+}
+.portfolio .port-content .card:hover .kjs.title::after {
+  content: "Q1&2 2020";
+}
+.portfolio .port-content .card:hover .blnt-tree.title::after {
+  content: "Q3&4 2019";
+}
+.portfolio .port-content .card:hover .blnt-piano.title::after {
+  content: "Q1&2 2019";
+}
+.portfolio .port-content .card:hover .cca.title::after {
+  content: "Q3&4 2018";
+}
+.portfolio .port-content .card p {
+  font-size: 14px;
 }
 .portfolio .port-content .card .project-btn {
   display: none;
-  transition: all 3s ease;
+  margin-top: 13px;
+  justify-content: space-around;
+  transition: all 0.3s ease;
 }
 .portfolio .port-content .card .project-btn a {
   display: block;
   color: #fff;
   background-color: rgb(59, 59, 59);
-  width: 47%;
-  font-size: 16px;
-  padding: 10px 25px;
+  border: rgb(59, 59, 59);
+  border-radius: 6px;
+  width: 100px;
+  font-size: 14px;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+}
+.portfolio .port-content .card .project-btn a:hover {
+  background-color: crimson;
+  border: crimson;
+  transform: scale(1.1);
 }
 .portfolio .port-content .card:hover .project-btn {
   display: flex;
-  margin-top: 15px;
-  justify-content: space-around;
 }
 /* blogs section styling */
 .blogs .title::after {
@@ -501,11 +550,12 @@ section .title::after {
   font-weight: 300;
 }
 .blogs .carousel .card .bar {
-  margin: 10px 0px;
+  margin: 10px 0;
   background: lightskyblue;
   height: 3px;
   width: 75%;
 }
+
 .blogs .carousel .card p {
   font-size: 14px;
 }
@@ -808,7 +858,7 @@ section.social-media {
   .blogs .carousel .card .box {
     align-items: center;
   }
-  .blogs .carousel .card .bar {
+  .blogs .carousel .card .separate-bar {
     margin: 20px;
   }
 }
