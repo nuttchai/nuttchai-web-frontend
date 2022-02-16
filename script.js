@@ -125,7 +125,9 @@ $(document).ready(function () {
   //#endregion
 
   //#region RESET FORM WHEN SUBMIT
-  $("#contact-form")[0].reset();
+  $("#contact-form").each(function () {
+    this.reset();
+  });
   //#endregion
 
   //#region NAVIGATION BAR and SCROLL UP BTN
