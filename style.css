@@ -311,16 +311,17 @@ section .title::after {
   padding: 15px 30px;
   color: #fff;
   font-weight: 500;
-  text-align: center;
+  justify-content: center;
   border-radius: 6px;
   transition: all 0.3s ease;
+  min-width: 170px;
 }
-.about .cv {
+.about .resume {
   background: crimson;
   border: 2px solid crimson;
-  margin-right: 5px;
+  margin-right: 15px;
 }
-.about .cv:hover {
+.about .resume:hover {
   color: crimson;
   background: none;
 }
@@ -335,11 +336,12 @@ section .title::after {
 .about .github span {
   max-height: 25px;
   max-width: 25px;
-  margin-right: 5px;
+  margin-right: 8px;
+  transition: all 0.3s ease;
 }
 .about .github span img {
-  height: 95%;
-  width: 95%;
+  height: 100%;
+  width: 100%;
   object-fit: fill;
 }
 .about .about-content .left .intro,
@@ -873,6 +875,15 @@ section.social-media {
   .about .button a {
     font-size: 16px;
     padding: 10px 25px;
+    min-width: 150px;
+  }
+  .about .resume {
+    margin-right: 5px;
+  }
+  .about .github span {
+    max-height: 22px;
+    max-width: 22px;
+    margin-right: 5px;
   }
   .portfolio .port-content .card {
     width: 100%;
