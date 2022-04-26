@@ -467,6 +467,12 @@ section .title::after {
   background: #222;
   width: 90px;
 }
+.portfolio .port-content .card:hover .hospital-in-bed.title::after {
+  content: "04/2022";
+}
+.portfolio .port-content .card:hover .nong-sampeng.title::after {
+  content: "10/2021";
+}
 .portfolio .port-content .card:hover .kinkhorn.title::after,
 .portfolio .port-content .card:hover .learning-hub.title::after {
   content: "Q1&2 2021";
@@ -491,7 +497,7 @@ section .title::after {
 }
 .portfolio .port-content .card .project-btn {
   display: none;
-  margin-top: 13px;
+  flex-wrap: wrap;
   justify-content: space-around;
   transition: all 0.3s ease;
 }
@@ -501,10 +507,11 @@ section .title::after {
   background-color: rgb(59, 59, 59);
   border: rgb(59, 59, 59);
   border-radius: 6px;
-  width: 100px;
+  width: 120px;
   font-size: 14px;
   padding: 8px 0;
   transition: all 0.3s ease;
+  margin-top: 13px
 }
 .portfolio .port-content .card .project-btn a:hover {
   background-color: crimson;
