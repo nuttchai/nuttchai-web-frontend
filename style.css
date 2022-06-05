@@ -377,25 +377,22 @@ section .title::after {
   background: crimson;
 }
 .about-content .right .python::before {
-  width: 75%;
+  width: 85%;
 }
 .about-content .right .js::before {
-  width: 70%;
+  width: 80%;
+}
+.about-content .right .go::before {
+  width: 75%;
+}
+.about-content .right .html::before {
+  width: 75%;
+}
+.about-content .right .css::before {
+  width: 65%;
 }
 .about-content .right .csharp::before {
   width: 65%;
-}
-.about-content .right .html::before {
-  width: 65%;
-}
-.about-content .right .css::before {
-  width: 55%;
-}
-.about-content .right .go::before {
-  width: 50%;
-}
-.about-content .right .java::before {
-  width: 50%;
 }
 .about .about-content .right .technologies img {
   height: 50px;
