@@ -86,9 +86,6 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
-.dark-mode-toggle .dark-mode-toggle-icon {
-  transition: all 0.3s ease;
-}
 .darkmode {
   --primary-color: #af1030;
   --foreground: var(--clr-light);
