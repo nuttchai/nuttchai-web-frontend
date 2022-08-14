@@ -428,8 +428,11 @@ section .title::after {
 .about-content .right .python::before {
   width: 85%;
 }
+.about-content .right .ts::before {
+  width: 90%;
+}
 .about-content .right .js::before {
-  width: 80%;
+  width: 90%;
 }
 .about-content .right .go::before {
   width: 75%;
