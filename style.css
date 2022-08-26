@@ -37,23 +37,28 @@ body {
   display: none;
 }
 
-/* scroll up btn */
-.scroll-up-btn {
+/* scroll up & toggle color btn position */
+.scroll-up-btn, .dark-mode-toggle {
   position: fixed;
   z-index: 4;
   height: 42px;
   width: 42px;
-  background: var(--primary-color);
-  right: 1em;
-  bottom: 1em;
-  text-align: center;
-  line-height: 50px;
-  color: #fff;
+  bottom: 8px;
   border-radius: 5px;
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
+  line-height: 45px;
+}
+
+/* scroll up btn */
+.scroll-up-btn {
+  background: var(--primary-color);
+  color: #fff;
+  right: 16px;
+  border: 2px solid var(--primary-color);
+  text-align: center;
 }
 .scroll-up-btn.show {
   opacity: 1;
@@ -65,22 +70,11 @@ body {
 
 /* toggle dark/light btn */
 .dark-mode-toggle {
-  position: fixed;
-  z-index: 4;
-  bottom: 1.2em;
-  right: 5.2em;
+  background: transparent;
   color: var(--foreground);
+  right: 70px;
   border: 2px solid currentColor;
   padding: 4px;
-  background: transparent;
-  cursor: pointer;
-  border-radius: 5px;
-  line-height: 45px;
-  width: 42px;
-  height: 42px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
 }
 .dark-mode-toggle.show {
   opacity: 1;
@@ -946,16 +940,17 @@ section.social-media {
   }
   .scroll-up-btn,
   .dark-mode-toggle {
+    bottom: 6px;
     height: 35px;
     width: 35px;
   }
   .scroll-up-btn {
-    line-height: 42px;
-    right: 0.8em;
+    line-height: 39px;
+    right: 10px;
   }
   .dark-mode-toggle {
-    line-height: 33px;
-    right: 4.4em;
+    line-height: 32px;
+    right: 55px;
   }
 }
 
