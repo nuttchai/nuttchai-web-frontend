@@ -68,7 +68,7 @@ body {
   position: fixed;
   z-index: 4;
   bottom: 1.2em;
-  left: 1.2em;
+  right: 5.2em;
   color: var(--foreground);
   border: 2px solid currentColor;
   padding: 4px;
@@ -951,9 +951,11 @@ section.social-media {
   }
   .scroll-up-btn {
     line-height: 42px;
+    right: 0.8em;
   }
   .dark-mode-toggle {
     line-height: 33px;
+    right: 4.4em;
   }
 }
 
