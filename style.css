@@ -38,7 +38,8 @@ body {
 }
 
 /* scroll up & toggle color btn position */
-.scroll-up-btn, .dark-mode-toggle {
+.scroll-up-btn,
+.dark-mode-toggle {
   position: fixed;
   z-index: 4;
   height: 42px;
@@ -516,6 +517,7 @@ section .title::after {
 .portfolio .port-content .card:hover .nong-sampeng.title::after {
   content: "10/2021";
 }
+.portfolio .port-content .card:hover .game-sale.title::after,
 .portfolio .port-content .card:hover .kinkhorn.title::after,
 .portfolio .port-content .card:hover .learning-hub.title::after {
   content: "Q1&2 2021";
