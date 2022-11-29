@@ -170,7 +170,7 @@ input.toggle {
   visibility: hidden;
 }
 input.toggle:checked + label.toggle {
-  background: #242424;
+  background: var(--clr-dark);
 }
 input.toggle:checked + label.toggle:after {
   left: 74px;
@@ -196,7 +196,7 @@ label.toggle img.moon {
   transition: 0.3s;
 }
 input.toggle:checked + label.toggle img.sun {
-  filter: invert(0);
+  filter: invert(0.35);
 }
 input.toggle:checked + label.toggle img.moon {
   filter: invert(1);
