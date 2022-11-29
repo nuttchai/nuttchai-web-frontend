@@ -15,16 +15,10 @@ VANTA.NET({
 });
 //#endregion
 
+const DARK_MODE_KEY = "darkMode";
+const DARK_MODE_VALUE = "enabled";
+
 $(document).ready(function () {
-  //#region CHANGE LOGO WHEN HOVER BUTTON
-  $(".github").on({
-    mouseenter: function () {
-      $(".github-icon").attr("src", "/images/GitHub-Mark-32px.png");
-    },
-    mouseleave: function () {
-      $(".github-icon").attr("src", "/images/GitHub-Mark-Light-32px.png");
-    },
-  });
   $(".footer-facebook").on({
     mouseenter: function () {
       $(".footer-facebook-icon").attr(
@@ -175,26 +169,53 @@ $(document).ready(function () {
 
   //#region TOGGLE DARK MODE
   // check for saved 'darkMode' in localStorage
-  let darkMode = localStorage.getItem("darkMode");
-
+  let darkMode = localStorage.getItem(DARK_MODE_KEY);
   const darkModeToggle = document.querySelector("#darkmode-toggle");
+
+  const updateGitHubIcon = (darkMode) => {
+    let githubMouseEnterIcon =
+      darkMode !== DARK_MODE_VALUE
+        ? "GitHub-Mark-32px.png"
+        : "GitHub-Mark-Light-32px.png";
+    let githubMouseLeaveIcon =
+      darkMode !== DARK_MODE_VALUE
+        ? "GitHub-Mark-Light-32px.png"
+        : "GitHub-Mark-32px.png";
+
+    // To set the icon at initial load
+    $(".github-icon").attr("src", `/images/${githubMouseLeaveIcon}`);
+
+    // Listen for mouse enter and leave and then change its icon
+    $(".github").on({
+      mouseenter: function () {
+        $(".github-icon").attr("src", `/images/${githubMouseEnterIcon}`);
+      },
+      mouseleave: function () {
+        $(".github-icon").attr("src", `/images/${githubMouseLeaveIcon}`);
+      },
+    });
+  };
 
   const enableDarkMode = () => {
     // 1. Add the class to the body
     document.body.classList.add("darkmode");
     // 2. Update darkMode in localStorage
-    localStorage.setItem("darkMode", "enabled");
+    localStorage.setItem(DARK_MODE_KEY, DARK_MODE_VALUE);
+    // 3. Update GitHub Icon
+    updateGitHubIcon(DARK_MODE_VALUE);
   };
 
   const disableDarkMode = () => {
     // 1. Remove the class from the body
     document.body.classList.remove("darkmode");
     // 2. Update darkMode in localStorage
-    localStorage.setItem("darkMode", null);
+    localStorage.setItem(DARK_MODE_KEY, null);
+    // 3. Update GitHub Icon
+    updateGitHubIcon(null);
   };
 
   const initPage = () => {
-    if (darkMode === "enabled") {
+    if (darkMode === DARK_MODE_VALUE) {
       // If the user already visited and enabled darkMode
       // start things off with it on
       enableDarkMode();
@@ -208,13 +229,13 @@ $(document).ready(function () {
   // When someone clicks the button
   darkModeToggle.addEventListener("click", () => {
     // get their darkMode setting
-    darkMode = localStorage.getItem("darkMode");
+    darkMode = localStorage.getItem(DARK_MODE_KEY);
 
-    // if it not current enabled, enable it
-    if (darkMode !== "enabled") {
+    if (darkMode !== DARK_MODE_VALUE) {
+      // if it not current enabled, enable it
       enableDarkMode();
-      // if it has been enabled, turn it off
     } else {
+      // if it has been enabled, turn it off
       disableDarkMode();
     }
   });

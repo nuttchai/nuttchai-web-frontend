@@ -19,10 +19,14 @@ body {
 :root {
   --clr-light: #fff;
   --clr-dark: #19191d;
+  --clr-dark-btn: #171516;
   --primary-color: crimson;
 
   --foreground: var(--clr-dark);
   --background: var(--clr-light);
+  --github-text-color: var(--clr-light);
+  --github-text-color-hover: var(--clr-dark-btn);
+  --github-button-color: var(--clr-dark-btn);
 }
 
 .max-width {
@@ -75,6 +79,9 @@ body {
   --primary-color: #af1030;
   --foreground: var(--clr-light);
   --background: var(--clr-dark);
+  --github-text-color: var(--clr-dark-btn);
+  --github-text-color-hover: var(--clr-light);
+  --github-button-color: var(--clr-light);
 }
 
 /* navbar styling */
@@ -315,12 +322,20 @@ section .title::after {
   display: inline-flex;
   font-size: 20px;
   padding: 15px 30px;
-  color: #fff;
   font-weight: 500;
   justify-content: center;
   border-radius: 6px;
   transition: all 0.3s ease;
   min-width: 170px;
+}
+.about .button a.resume {
+  color: #fff;
+}
+.about .button a.github {
+  color: var(--github-text-color);
+}
+.about .button a.github:hover {
+  color: var(--github-button-color);
 }
 .about .resume {
   background: var(--primary-color);
@@ -332,11 +347,10 @@ section .title::after {
   background: none;
 }
 .about .github {
-  background: #171516;
-  border: 2px solid #171516;
+  background: var(--github-button-color);
+  border: 2px solid var(--github-button-color);
 }
 .about .github:hover {
-  color: #171516;
   background: none;
 }
 .about .github span {
