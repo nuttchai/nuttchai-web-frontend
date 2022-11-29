@@ -105,6 +105,9 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.navbar .logo {
+  display: flex;
+}
 .navbar .logo a {
   color: #fff;
   font-size: 35px;
@@ -135,104 +138,80 @@ body {
   color: #252934;
 }
 
-/* animation (home page) styling */
-/* .animation-home {
+/* light-dark toggle button */
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.toggle-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transition: 0.3s;
+}
+label.toggle {
+  width: 75px;
+  height: 31px;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 31px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.4), inset 0px -1px 3px rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}
+label.toggle:after {
+  content: "";
+  width: 27px;
+  height: 27px;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: #252934;
+  top: 2px;
+  left: 2px;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 27px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
-.animation-box div {
+input.toggle {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+input.toggle:checked + label.toggle {
+  background: #242424;
+}
+input.toggle:checked + label.toggle:after {
+  left: 74px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+label.toggle:active:after {
+  width: 39px;
+}
+label.toggle img {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  background-color: transparent;
-  border: 4px solid;
-  border-radius: 100%;
+  width: 18px;
+  top: 6px;
+  z-index: 100;
 }
-.animation-box div:nth-child(1) {
-  top: 12%;
-  left: 42%;
-  border-color: lightcoral;
-  animation: animate 9.2s linear infinite;
+label.toggle img.sun {
+  left: 6px;
+  filter: invert(1);
+  transition: 0.3s;
 }
-.animation-box div:nth-child(2) {
-  top: 90%;
-  left: 40%;
-  border-color: lightcyan;
-  animation: animate 5.9s linear infinite;
+label.toggle img.moon {
+  left: 51px;
+  transition: 0.3s;
 }
-.animation-box div:nth-child(3) {
-  top: 17%;
-  left: 6%;
-  border-color: lightgray;
-  animation: animate 9s linear infinite;
+input.toggle:checked + label.toggle img.sun {
+  filter: invert(0);
 }
-.animation-box div:nth-child(4) {
-  top: 20%;
-  left: 55%;
-  border-color: lightpink;
-  animation: animate 4.6s linear infinite;
+input.toggle:checked + label.toggle img.moon {
+  filter: invert(1);
 }
-.animation-box div:nth-child(5) {
-  top: 76%;
-  left: 10%;
-  border-color: lightsalmon;
-  animation: animate 6.9s linear infinite;
-}
-.animation-box div:nth-child(6) {
-  top: 80%;
-  left: 60%;
-  border-color: lightseagreen;
-  animation: animate 8.4s linear infinite;
-}
-.animation-box div:nth-child(7) {
-  top: 60%;
-  left: 80%;
-  border-color: lightskyblue;
-  animation: animate 5.7s linear infinite;
-}
-.animation-box div:nth-child(8) {
-  top: 32%;
-  left: 25%;
-  border-color: lightslategray;
-  animation: animate 6.3s linear infinite;
-}
-.animation-box div:nth-child(9) {
-  top: 95%;
-  left: 10%;
-  border-color: lightsteelblue;
-  animation: animate 13.2s linear infinite;
-}
-.animation-box div:nth-child(10) {
-  top: 20%;
-  left: 85%;
-  border-color: lightyellow;
-  animation: animate 7.7s linear infinite;
-}
-.animation-box div:nth-child(11) {
-  top: 90%;
-  left: 90%;
-  border-color: linen;
-  animation: animate 12s linear infinite;
-}
-.animation-box div:nth-child(12) {
-  top: 40%;
-  left: 63%;
-  border-color: lavender;
-  animation: animate 10.2s linear infinite;
-}
-@keyframes animate {
-  0% {
-    transform: scale(0) translateY(0) rotate(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.7) translateY(-200px);
-    opacity: 1;
-  }
-} */
 
 /* home section styling */
 .home {
@@ -833,6 +812,36 @@ section.social-media {
     margin: 20px 0;
     font-size: 25px;
   }
+
+  .toggle-btn {
+    margin-left: 10px;
+  }
+  label.toggle {
+    width: 62px;
+    height: 26px;
+  }
+  label.toggle:after {
+    width: 22px;
+    height: 22px;
+    border-radius: 22px;
+  }
+  input.toggle:checked + label.toggle:after {
+    left: 61px;
+  }
+  label.toggle:active:after {
+    width: 32px;
+  }
+  label.toggle img {
+    width: 15px;
+    top: 5px;
+  }
+  label.toggle img.sun {
+    left: 5px;
+  }
+  label.toggle img.moon {
+    left: 42px;
+  }
+
   .home .home-content .text-2 {
     font-size: 70px;
   }

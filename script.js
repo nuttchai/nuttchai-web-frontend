@@ -136,10 +136,12 @@ $(document).ready(function () {
       $(".navbar").addClass("sticky");
       $(".scroll-up-btn").addClass("show");
       $(".dark-mode-toggle").addClass("show");
+      $(".toggle-btn").addClass("show");
     } else {
       $(".navbar").removeClass("sticky");
       $(".scroll-up-btn").removeClass("show");
       $(".dark-mode-toggle").removeClass("show");
+      $(".toggle-btn").removeClass("show");
     }
   });
   //#endregion
@@ -194,7 +196,7 @@ $(window)
 // check for saved 'darkMode' in localStorage
 let darkMode = localStorage.getItem("darkMode");
 
-const darkModeToggle = document.querySelector("#dark-mode-toggle");
+const darkModeToggle = document.querySelector("#darkmode-toggle");
 
 const enableDarkMode = () => {
   // 1. Add the class to the body

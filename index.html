@@ -34,7 +34,17 @@
     <!-- navigation bar -->
     <nav class="navbar">
       <div class="max-width">
-        <div class="logo"><a href="#">nutt<span>chai.</span></a></div>
+        <div class="logo">
+          <a href="#">nutt<span>chai.</span></a>
+          <!-- light/dark toggle button -->
+          <div class="toggle-btn">
+            <input class="toggle" type="checkbox" id="darkmode-toggle" />
+            <label class="toggle" for="darkmode-toggle">
+                <img class="sun" src="images/toggle-icons/sun.svg" alt="sun">
+                <img class="moon" src="images/toggle-icons/moon.svg" alt="moon">
+            </label>
+          </div>
+        </div>
         <ul class="menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -47,25 +57,7 @@
         </div>
       </div>
     </nav>
-
-    <!-- animation background (home page) -->
-    <!-- <div class="animation-home">
-      <div class="animation-box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div> -->
-
+    
     <!-- home section -->
     <section class="home" id="home">
       <div class="max-width">
