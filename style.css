@@ -25,7 +25,6 @@ body {
   --foreground: var(--clr-dark);
   --background: var(--clr-light);
   --github-text-color: var(--clr-light);
-  --github-text-color-hover: var(--clr-dark-btn);
   --github-button-color: var(--clr-dark-btn);
 }
 
@@ -80,7 +79,6 @@ body {
   --foreground: var(--clr-light);
   --background: var(--clr-dark);
   --github-text-color: var(--clr-dark-btn);
-  --github-text-color-hover: var(--clr-light);
   --github-button-color: var(--clr-light);
 }
 
