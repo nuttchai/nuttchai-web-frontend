@@ -135,11 +135,9 @@ $(document).ready(function () {
     if (this.scrollY > 20) {
       $(".navbar").addClass("sticky");
       $(".scroll-up-btn").addClass("show");
-      $(".darkmode-toggle-btn").addClass("show");
     } else {
       $(".navbar").removeClass("sticky");
       $(".scroll-up-btn").removeClass("show");
-      $(".darkmode-toggle-btn").removeClass("show");
     }
   });
   //#endregion
