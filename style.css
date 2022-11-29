@@ -37,9 +37,8 @@ body {
   display: none;
 }
 
-/* scroll up & toggle color btn position */
-.scroll-up-btn,
-.dark-mode-toggle {
+/* scroll up btn position */
+.scroll-up-btn {
   position: fixed;
   z-index: 4;
   height: 42px;
@@ -69,23 +68,13 @@ body {
   font-size: 1.5em;
 }
 
-/* toggle dark/light btn */
-.dark-mode-toggle {
-  background: transparent;
-  color: var(--foreground);
-  right: 70px;
-  border: 2px solid currentColor;
-  padding: 4px;
-}
-.dark-mode-toggle.show {
-  opacity: 1;
-  pointer-events: auto;
-}
+/* dark mode styling */
 .darkmode {
   --primary-color: #af1030;
   --foreground: var(--clr-light);
   --background: var(--clr-dark);
 }
+
 
 /* navbar styling */
 .navbar {
@@ -139,7 +128,7 @@ body {
 }
 
 /* light-dark toggle button */
-.toggle-btn {
+.darkmode-toggle-btn {
   display: flex;
   align-items: center;
   margin-left: 15px;
@@ -147,7 +136,7 @@ body {
   pointer-events: none;
   transition: 0.3s;
 }
-.toggle-btn.show {
+.darkmode-toggle-btn.show {
   opacity: 1;
   pointer-events: auto;
   transition: 0.3s;
@@ -813,7 +802,7 @@ section.social-media {
     font-size: 25px;
   }
 
-  .toggle-btn {
+  .darkmode-toggle-btn {
     margin-left: 10px;
   }
   label.toggle {
@@ -949,8 +938,7 @@ section.social-media {
   .portfolio .port-content .card {
     width: 100%;
   }
-  .scroll-up-btn,
-  .dark-mode-toggle {
+  .scroll-up-btn {
     bottom: 6px;
     height: 35px;
     width: 35px;
@@ -958,10 +946,6 @@ section.social-media {
   .scroll-up-btn {
     line-height: 39px;
     right: 10px;
-  }
-  .dark-mode-toggle {
-    line-height: 32px;
-    right: 55px;
   }
 }
 
