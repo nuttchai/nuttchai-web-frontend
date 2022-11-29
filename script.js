@@ -214,18 +214,6 @@ $(document).ready(function () {
     updateGitHubIcon(null);
   };
 
-  const initPage = () => {
-    if (darkMode === DARK_MODE_VALUE) {
-      // If the user already visited and enabled darkMode
-      // start things off with it on
-      enableDarkMode();
-      darkModeToggle.checked = true;
-    } else {
-      disableDarkMode();
-      darkModeToggle.checked = false;
-    }
-  };
-
   // When someone clicks the button
   darkModeToggle.addEventListener("click", () => {
     // get their darkMode setting
@@ -240,6 +228,26 @@ $(document).ready(function () {
     }
   });
   //#endregion
+
+  const initPage = () => {
+    // add sticky navbar if user has scrolled down
+    if ($(document).scrollTop() > 20) {
+      $(".navbar").addClass("sticky");
+      $(".scroll-up-btn").addClass("show");
+    } else {
+      $(".navbar").removeClass("sticky");
+      $(".scroll-up-btn").removeClass("show");
+    }
+
+    // update the page style depends on 'darkMode' retrieved from localStorage
+    if (darkMode === DARK_MODE_VALUE) {
+      enableDarkMode();
+      darkModeToggle.checked = true;
+    } else {
+      disableDarkMode();
+      darkModeToggle.checked = false;
+    }
+  };
 
   initPage();
   document.getElementsByTagName("html")[0].style.visibility = "visible";
