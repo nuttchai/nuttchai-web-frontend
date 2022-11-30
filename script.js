@@ -230,7 +230,7 @@ $(document).ready(function () {
   //#endregion
 
   const initPage = () => {
-    // add sticky navbar if user has scrolled down
+    // add sticky navbar if user already scrolled down at start
     if ($(document).scrollTop() > 20) {
       $(".navbar").addClass("sticky");
       $(".scroll-up-btn").addClass("show");
