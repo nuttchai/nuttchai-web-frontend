@@ -317,6 +317,7 @@ section .title::after {
 .about .button {
   display: flex;
   justify-content: center;
+  gap: 15px;
 }
 .about .button a {
   display: inline-flex;
@@ -324,7 +325,7 @@ section .title::after {
   padding: 15px 30px;
   font-weight: 500;
   justify-content: center;
-  border-radius: 6px;
+  border-radius: 18px;
   transition: all 0.3s ease;
   min-width: 170px;
 }
@@ -343,7 +344,6 @@ section .title::after {
 .about .resume {
   background: var(--primary-color);
   border: 2px solid var(--primary-color);
-  margin-right: 15px;
 }
 .about .resume:hover {
   color: var(--primary-color);
@@ -935,13 +935,13 @@ section.social-media {
   .home .home-content .text-3 {
     font-size: 27px;
   }
+  .about .button {
+    margin-right: 5px;
+  }
   .about .button a {
     font-size: 16px;
     padding: 10px 25px;
     min-width: 150px;
-  }
-  .about .resume {
-    margin-right: 5px;
   }
   .about .github span {
     max-height: 20px;
