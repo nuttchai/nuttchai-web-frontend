@@ -26,6 +26,7 @@ body {
   --background: var(--clr-light);
   --github-text-color: var(--clr-light);
   --github-button-color: var(--clr-dark-btn);
+  --resume-button-color: var(--primary-color); 
 }
 
 .max-width {
@@ -80,6 +81,7 @@ body {
   --background: var(--clr-dark);
   --github-text-color: var(--clr-dark-btn);
   --github-button-color: var(--clr-light);
+  --resume-button-color: var(--clr-light); 
 }
 
 /* navbar styling */
@@ -328,6 +330,9 @@ section .title::after {
 }
 .about .button a.resume {
   color: #fff;
+}
+.about .button a.resume:hover {
+  color: var(--resume-button-color);
 }
 .about .button a.github {
   color: var(--github-text-color);
