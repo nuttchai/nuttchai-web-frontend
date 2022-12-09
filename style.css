@@ -426,7 +426,7 @@ section .title::after {
   height: 50px;
   width: 50px;
   object-fit: contain;
-  margin: 0 5px 5px 5px;
+  gap: 5px;
 }
 
 /* portfolio section styling */
@@ -947,6 +947,10 @@ section.social-media {
     max-height: 20px;
     max-width: 20px;
     margin-right: 5px;
+  }
+  .about .about-content .right .technologies img {
+    height: 40px;
+    width: 40px;
   }
   .portfolio .port-content .card {
     width: 100%;
