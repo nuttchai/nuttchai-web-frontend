@@ -356,10 +356,12 @@ section .title::after {
 .about .github:hover {
   background: none;
 }
+.about .button a.github {
+  gap: 8px;
+}
 .about .github span {
   max-height: 25px;
   max-width: 25px;
-  margin-right: 8px;
   transition: all 0.3s ease;
 }
 .about .github span img {
@@ -935,18 +937,17 @@ section.social-media {
   .home .home-content .text-3 {
     font-size: 27px;
   }
-  .about .button {
-    margin-right: 5px;
-  }
   .about .button a {
     font-size: 16px;
     padding: 10px 25px;
     min-width: 150px;
   }
+  .about .button a.github {
+    gap: 5px;
+  }
   .about .github span {
     max-height: 20px;
     max-width: 20px;
-    margin-right: 5px;
   }
   .about .about-content .right .technologies img {
     height: 40px;
