@@ -26,7 +26,7 @@ body {
   --background: var(--clr-light);
   --github-text-color: var(--clr-light);
   --github-button-color: var(--clr-dark-btn);
-  --resume-button-color: var(--primary-color); 
+  --resume-button-color: var(--primary-color);
 }
 
 .max-width {
@@ -81,7 +81,7 @@ body {
   --background: var(--clr-dark);
   --github-text-color: var(--clr-dark-btn);
   --github-button-color: var(--clr-light);
-  --resume-button-color: var(--clr-light); 
+  --resume-button-color: var(--clr-light);
 }
 
 /* navbar styling */
@@ -300,9 +300,6 @@ section .title::after {
   object-fit: cover;
   border-radius: 15px;
 }
-.about .about-content .left .intro {
-  margin-top: 40px;
-}
 .about .about-content .text {
   font-size: 25px;
   font-weight: 600;
@@ -369,9 +366,11 @@ section .title::after {
   width: 100%;
   object-fit: fill;
 }
-.about .about-content .left .intro,
-.about .about-content .right .languages,
-.about .about-content .right .technologies {
+.about .about-content .left .intro {
+  max-width: 450px;
+  margin: 40px auto 30px auto;
+}
+.about .about-content .right .languages {
   margin-bottom: 40px;
 }
 .about .about-content .right .languages .bars {
@@ -877,9 +876,10 @@ section.social-media {
     margin-bottom: 30px;
   }
   .about .about-content .left .intro {
-    margin-top: 30px;
+    max-width: unset;
+    margin: 30px 0;
   }
-  .about .about-content .left .intro,
+  .about .about-content .right .technologies,
   .about .about-content .right .languages {
     margin-bottom: 30px;
   }
