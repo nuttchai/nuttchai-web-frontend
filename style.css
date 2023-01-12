@@ -303,7 +303,7 @@ section .title::after {
 .about .about-content .text {
   font-size: 25px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .about .about-content .left .text span {
   color: var(--primary-color);
@@ -866,9 +866,6 @@ section.social-media {
   }
   .max-width {
     max-width: 800px;
-  }
-  .about .about-content .text {
-    margin-bottom: 15px;
   }
   .about .about-content .column {
     width: 100%;
