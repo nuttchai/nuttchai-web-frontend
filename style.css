@@ -423,11 +423,86 @@ section .title::after {
 .about-content .right .csharp::before {
   width: 65%;
 }
-.about .about-content .right .technologies img {
+.about .about-content .right .technologies .icon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.about .about-content .right .technologies .icon img {
   height: 50px;
   width: 50px;
   object-fit: contain;
-  gap: 5px;
+}
+.about .about-content .right .technologies .icon .info {
+  display: none;
+}
+.about .about-content .right .technologies .icon .git:hover img,
+.about .about-content .right .technologies .icon .linux:hover img,
+.about .about-content .right .technologies .icon .echo:hover img,
+.about .about-content .right .technologies .icon .nodejs:hover img,
+.about .about-content .right .technologies .icon .expressjs:hover img,
+.about .about-content .right .technologies .icon .nestjs:hover img,
+.about .about-content .right .technologies .icon .aspdotnet:hover img,
+.about .about-content .right .technologies .icon .angular:hover img,
+.about .about-content .right .technologies .icon .react:hover img,
+.about .about-content .right .technologies .icon .redis:hover img,
+.about .about-content .right .technologies .icon .mysql:hover img,
+.about .about-content .right .technologies .icon .postgresql:hover img,
+.about .about-content .right .technologies .icon .mongodb:hover img,
+.about .about-content .right .technologies .icon .aws:hover img,
+.about .about-content .right .technologies .icon .gcp:hover img,
+.about .about-content .right .technologies .icon .docker:hover img,
+.about .about-content .right .technologies .icon .kubernetes:hover img,
+.about .about-content .right .technologies .icon .github-action:hover img,
+.about .about-content .right .technologies .icon .jenkins:hover img,
+.about .about-content .right .technologies .icon .ansible:hover img,
+.about .about-content .right .technologies .icon .terraform:hover img,
+.about .about-content .right .technologies .icon .swagger:hover img,
+.about .about-content .right .technologies .icon .grpc:hover img,
+.about .about-content .right .technologies .icon .protobuf:hover img,
+.about .about-content .right .technologies .icon .prometheus:hover img,
+.about .about-content .right .technologies .icon .grafana:hover img,
+.about .about-content .right .technologies .icon .jmeter:hover img {
+  display: none;
+}
+.about .about-content .right .technologies .icon .git:hover .info,
+.about .about-content .right .technologies .icon .linux:hover .info,
+.about .about-content .right .technologies .icon .echo:hover .info,
+.about .about-content .right .technologies .icon .nodejs:hover .info,
+.about .about-content .right .technologies .icon .expressjs:hover .info,
+.about .about-content .right .technologies .icon .nestjs:hover .info,
+.about .about-content .right .technologies .icon .aspdotnet:hover .info,
+.about .about-content .right .technologies .icon .angular:hover .info,
+.about .about-content .right .technologies .icon .react:hover .info,
+.about .about-content .right .technologies .icon .redis:hover .info,
+.about .about-content .right .technologies .icon .mysql:hover .info,
+.about .about-content .right .technologies .icon .postgresql:hover .info,
+.about .about-content .right .technologies .icon .mongodb:hover .info,
+.about .about-content .right .technologies .icon .aws:hover .info,
+.about .about-content .right .technologies .icon .gcp:hover .info,
+.about .about-content .right .technologies .icon .docker:hover .info,
+.about .about-content .right .technologies .icon .kubernetes:hover .info,
+.about .about-content .right .technologies .icon .github-action:hover .info,
+.about .about-content .right .technologies .icon .jenkins:hover .info,
+.about .about-content .right .technologies .icon .ansible:hover .info,
+.about .about-content .right .technologies .icon .terraform:hover .info,
+.about .about-content .right .technologies .icon .swagger:hover .info,
+.about .about-content .right .technologies .icon .grpc:hover .info,
+.about .about-content .right .technologies .icon .protobuf:hover .info,
+.about .about-content .right .technologies .icon .prometheus:hover .info,
+.about .about-content .right .technologies .icon .grafana:hover .info,
+.about .about-content .right .technologies .icon .jmeter:hover .info {
+  display: block;
+  background: #252934;
+  color: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 50px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 7px;
 }
 
 /* portfolio section styling */
