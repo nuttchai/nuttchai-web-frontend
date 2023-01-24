@@ -441,7 +441,7 @@ section .title::after {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #252934;
+  background: var(--primary-color);
   color: #fff;
   padding: 10px;
   border-radius: 12px;
