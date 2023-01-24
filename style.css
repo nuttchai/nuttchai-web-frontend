@@ -27,6 +27,7 @@ body {
   --github-text-color: var(--clr-light);
   --github-button-color: var(--clr-dark-btn);
   --resume-button-color: var(--primary-color);
+  --icon-info: var(--clr-dark-btn);
 }
 
 .max-width {
@@ -82,6 +83,7 @@ body {
   --github-text-color: var(--clr-dark-btn);
   --github-button-color: var(--clr-light);
   --resume-button-color: var(--clr-light);
+  --icon-info: var(--clr-light);
 }
 
 /* navbar styling */
@@ -426,7 +428,7 @@ section .title::after {
 .about .about-content .right .technologies .icon {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
+  gap: 10px;
 }
 .about .about-content .right .technologies .icon .wrapper img,
 .about .about-content .right .technologies .icon .wrapper a {
@@ -441,11 +443,8 @@ section .title::after {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: var(--primary-color);
-  color: #fff;
-  padding: 10px;
-  border-radius: 12px;
-  font-size: 10px;
+  color: var(--icon-info);
+  font-size: 12px;
   font-weight: 500;
   cursor: pointer;
 }
