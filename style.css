@@ -426,12 +426,12 @@ section .title::after {
 .about .about-content .right .technologies .icon {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 9px;
 }
 .about .about-content .right .technologies .icon .wrapper img,
 .about .about-content .right .technologies .icon .wrapper a {
-  height: 51px;
-  width: 51px;
+  height: 50px;
+  width: 50px;
 }
 .about .about-content .right .technologies .icon .wrapper img {
   object-fit: contain;
