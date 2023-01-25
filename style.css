@@ -447,6 +447,7 @@ section .title::after {
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
+  animation: scale-text 0.3s ease-out;
 }
 .about .about-content .right .technologies .icon .wrapper:hover img {
   display: none;
@@ -573,6 +574,7 @@ section .title::after {
 .portfolio .port-content .card:hover .project-btn {
   display: flex;
 }
+
 /* blogs section styling */
 .blogs .title::after {
   content: "readme.md";
@@ -1100,5 +1102,18 @@ section.blogs {
   .curve,
   .curve-flipped {
     height: 100px;
+  }
+}
+
+@-webkit-keyframes scale-text {
+  0% {
+    opacity: 0.5;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
