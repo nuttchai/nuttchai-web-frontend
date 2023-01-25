@@ -428,7 +428,7 @@ section .title::after {
 .about .about-content .right .technologies .icon {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 11px;
 }
 .about .about-content .right .technologies .icon .wrapper img,
 .about .about-content .right .technologies .icon .wrapper a {
