@@ -58,6 +58,17 @@ $(document).ready(function () {
       );
     },
   });
+  $(".footer-gitlab").on({
+    mouseenter: function () {
+      $(".footer-gitlab-icon").attr(
+        "src",
+        "/images/social-media/gitlab-hover.png"
+      );
+    },
+    mouseleave: function () {
+      $(".footer-gitlab-icon").attr("src", "/images/social-media/gitlab.png");
+    },
+  });
   $(".footer-medium").on({
     mouseenter: function () {
       $(".footer-medium-icon").attr(
