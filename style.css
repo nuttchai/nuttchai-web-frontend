@@ -674,7 +674,7 @@ section .title::after {
 }
 .contact .contact-content .left p {
   text-align: justify;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 .contact .contact-content .left .icons {
   margin: 10px 0;
@@ -797,6 +797,7 @@ section.social-media {
 .social-media .text span {
   color: var(--primary-color);
 }
+
 /* responsive media query start */
 @media (max-width: 1104px) {
   .about .about-content .left img {
@@ -919,7 +920,7 @@ section.social-media {
     margin-bottom: 30px;
   }
   .contact .contact-content .left p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   .social-media .icon-container {
     margin-bottom: 20px;
