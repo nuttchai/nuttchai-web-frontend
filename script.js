@@ -214,10 +214,6 @@ $(document).ready(function () {
     localStorage.setItem(DARK_MODE_KEY, DARK_MODE_VALUE);
     // 3. Update GitHub Icon
     updateGitHubIcon(DARK_MODE_VALUE);
-
-    // Show LinkedIn Icon id LI-dark-profile-badge and hide LinkedIn Icon id LI-light-profile-badge
-    document.getElementById("LI-dark-profile-badge").style.display = "block";
-    document.getElementById("LI-light-profile-badge").style.display = "none";
   };
 
   const disableDarkMode = () => {
@@ -227,10 +223,6 @@ $(document).ready(function () {
     localStorage.setItem(DARK_MODE_KEY, null);
     // 3. Update GitHub Icon
     updateGitHubIcon(null);
-
-    // Show LinkedIn Icon id LI-light-profile-badge and hide LinkedIn Icon id LI-dark-profile-badge
-    document.getElementById("LI-light-profile-badge").style.display = "block";
-    document.getElementById("LI-dark-profile-badge").style.display = "none";
   };
 
   // When someone clicks the button
