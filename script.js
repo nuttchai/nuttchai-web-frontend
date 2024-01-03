@@ -80,6 +80,17 @@ $(document).ready(function () {
       $(".footer-medium-icon").attr("src", "/images/social-media/medium.png");
     },
   });
+  $(".footer-orcid").on({
+    mouseenter: function () {
+      $(".footer-orcid-icon").attr(
+        "src",
+        "/images/social-media/orcid-hover.png"
+      );
+    },
+    mouseleave: function () {
+      $(".footer-orcid-icon").attr("src", "/images/social-media/orcid.png");
+    },
+  });
   //#endregion
 
   //#region OWL CAROUSEL
