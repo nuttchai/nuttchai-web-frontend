@@ -19,20 +19,6 @@ const DARK_MODE_KEY = "darkMode";
 const DARK_MODE_VALUE = "enabled";
 
 $(document).ready(function () {
-  $(".footer-facebook").on({
-    mouseenter: function () {
-      $(".footer-facebook-icon").attr(
-        "src",
-        "/images/social-media/facebook-hover.png"
-      );
-    },
-    mouseleave: function () {
-      $(".footer-facebook-icon").attr(
-        "src",
-        "/images/social-media/facebook.png"
-      );
-    },
-  });
   $(".footer-linkedin").on({
     mouseenter: function () {
       $(".footer-linkedin-icon").attr(
