@@ -146,7 +146,11 @@ $(document).ready(function () {
 
   //#region TYPING ANIMATION
   var typed = new Typed(".typing", {
-    strings: ["Software Engineer", "Full Stack Developer", "Full Stack Grad!"],
+    strings: [
+      "Machine Learning Engineer",
+      "Software Engineer",
+      "Graduate Students!",
+    ],
     startDelay: 1250,
     backDelay: 750,
     typeSpeed: 25,
