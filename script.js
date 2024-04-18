@@ -147,8 +147,8 @@ $(document).ready(function () {
   //#region TYPING ANIMATION
   var typed = new Typed(".typing", {
     strings: [
-      "Machine Learning Engineer",
       "Software Engineer",
+      "Machine Learning Engineer",
       "Graduate Student!",
     ],
     startDelay: 1250,
