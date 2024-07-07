@@ -187,7 +187,7 @@ label.toggle img {
   position: absolute;
   width: 18px;
   top: 6px;
-  z-index: 100;
+  z-index: 1;
 }
 label.toggle img.sun {
   left: 6px;
@@ -830,6 +830,7 @@ section.social-media {
     text-align: center;
     padding: 80px 0;
     transition: all 0.3s ease;
+    z-index: 3;
   }
   .navbar .menu.active {
     left: 0;
