@@ -265,6 +265,64 @@ $(document).ready(function () {
   document.getElementsByTagName("html")[0].style.visibility = "visible";
 });
 
+// Chatbot Code
+document.addEventListener("DOMContentLoaded", () => {
+  const chatBody = document.getElementById("chat-body");
+  const userInput = document.getElementById("user-input");
+  const sendBtn = document.getElementById("send-btn");
+
+  // Function to send message
+  function sendMessage() {
+    const userMessage = userInput.value.trim();
+    if (!userMessage) return;
+
+    // Add user's message to chat
+    addMessage(userMessage, "user");
+
+    // Send message to LLM API
+    sendMessageToLLM(userMessage).then((botReply) => {
+      addMessage(botReply, "bot");
+    });
+
+    // Clear input
+    userInput.value = "";
+  }
+
+  // Click event for "Send" button
+  sendBtn.addEventListener("click", sendMessage);
+
+  // Listen for Enter key press
+  userInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Prevent new line in input
+      sendMessage();
+    }
+  });
+
+  function addMessage(text, sender) {
+    const messageDiv = document.createElement("div");
+    messageDiv.classList.add("chat-message", sender);
+    messageDiv.textContent = text;
+    chatBody.appendChild(messageDiv);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  async function sendMessageToLLM(message) {
+    try {
+      const response = await fetch("YOUR_LLM_API_ENDPOINT", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt: message }),
+      });
+
+      const data = await response.json();
+      return data.reply || "Sorry, I couldn't understand that.";
+    } catch (error) {
+      return "Error connecting to the chatbot.";
+    }
+  }
+});
+
 //#region REMOVE CONTACT CURVE
 $(window)
   .resize(function () {
