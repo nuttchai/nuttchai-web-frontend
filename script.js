@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function sendMessageToLLM() {
     try {
       const lambdaEndpoint =
-        "https://grcw2cgu6up4yq3akrgqnv3mbe0bpylg.lambda-url.ap-southeast-1.on.aws/";
+        "https://l124lppjse.execute-api.ap-southeast-1.amazonaws.com/default/nutt-personal-llm";
       const response = await fetch(lambdaEndpoint, {
         method: "POST",
         headers: {
