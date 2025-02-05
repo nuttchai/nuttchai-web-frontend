@@ -115,7 +115,7 @@
             </div>
           </div>
           <div class="column right">
-            <div class="languages">
+            <!-- <div class="languages">
               <div class="text">Languages</div>
               <div class="bars">
                 <div class="info">
@@ -166,7 +166,7 @@
                 </div>
                 <div class="line csharp"></div>
               </div>
-            </div>
+            </div> -->
             <div class="technologies">
               <div class="text">Technologies</div>
               <div class="icon">
@@ -500,6 +500,23 @@
                 </div>
               </div>
             </div>
+            <div class="LLM">
+              <div class="text">Talk with my AI chatbot</div>
+              <div class="chatbot">
+                <div class="chat-header">Ask Me Anything!</div>
+                <div class="chat-body" id="chat-body">
+                  <div class="chat-message bot">Hello! How can I help you?</div>
+                </div>
+                <div class="chat-footer">
+                  <input
+                    type="text"
+                    id="user-input"
+                    placeholder="Type a message..."
+                  />
+                  <button id="send-btn">Send</button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="column right">
             <div class="button">
@@ -538,7 +555,9 @@
             <div class="box">
               <i class="fas fa-hospital"></i>
               <div class="detail">
-                <div class="title hospital-in-bed">In-bed Patient Scale (Patient Weight Monitoring System)</div>
+                <div class="title hospital-in-bed">
+                  In-bed Patient Scale (Patient Weight Monitoring System)
+                </div>
                 <p>
                   Created web application using ReactJS displaying a real-time
                   patient weight data recorded by self-implemented load cell

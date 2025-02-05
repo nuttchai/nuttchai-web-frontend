@@ -265,6 +265,74 @@ $(document).ready(function () {
   document.getElementsByTagName("html")[0].style.visibility = "visible";
 });
 
+// Chatbot Code
+document.addEventListener("DOMContentLoaded", () => {
+  const chatBody = document.getElementById("chat-body");
+  const userInput = document.getElementById("user-input");
+  const sendBtn = document.getElementById("send-btn");
+
+  // Store chat history
+  let chatHistory = [];
+
+  // Function to send message
+  function sendMessage() {
+    const userMessage = userInput.value.trim();
+    if (!userMessage) return;
+
+    // Add user's message to chat & history
+    addMessage(userMessage, "user");
+    chatHistory.push({ role: "user", content: userMessage });
+
+    // Send message to LLM API
+    sendMessageToLLM().then((botReply) => {
+      addMessage(botReply, "bot");
+      chatHistory.push({ role: "assistant", content: botReply });
+    });
+
+    // Clear input
+    userInput.value = "";
+  }
+
+  // Click event for "Send" button
+  sendBtn.addEventListener("click", sendMessage);
+
+  // Listen for Enter key press
+  userInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Prevent new line in input
+      sendMessage();
+    }
+  });
+
+  function addMessage(text, sender) {
+    const messageDiv = document.createElement("div");
+    messageDiv.classList.add("chat-message", sender);
+    messageDiv.textContent = text;
+    chatBody.appendChild(messageDiv);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  async function sendMessageToLLM() {
+    try {
+      const lambdaEndpoint =
+        "https://grcw2cgu6up4yq3akrgqnv3mbe0bpylg.lambda-url.ap-southeast-1.on.aws/";
+      const response = await fetch(lambdaEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ chatHistory }),
+      });
+
+      const data = await response.json();
+      return data.reply || "Error: No response from LLM";
+    } catch (error) {
+      console.log("Error connecting to chatbot:", error);
+      return "Error connecting to chatbot.";
+    }
+  }
+});
+
 //#region REMOVE CONTACT CURVE
 $(window)
   .resize(function () {

@@ -282,7 +282,7 @@ section .title::after {
 .contact .contact-content {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
 }
 
@@ -372,7 +372,8 @@ section .title::after {
   max-width: 450px;
   margin: 40px auto 30px auto;
 }
-.about .about-content .right .languages {
+.about .about-content .right .languages,
+.about .about-content .right .technologies {
   margin-bottom: 40px;
 }
 .about .about-content .right .languages .bars {
@@ -454,6 +455,67 @@ section .title::after {
 }
 .about .about-content .right .technologies .icon .wrapper:hover a {
   display: flex;
+}
+.about .about-content .right .chatbot {
+  right: 10%;
+  left: auto;
+  background: #333;
+  color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+.about .about-content .right .chat-header {
+  background: #444;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+.about .about-content .right .chat-body {
+  height: 300px;
+  overflow-y: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* Hide scrollbar for Chrome, Safari */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+.about .about-content .right .chat-body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.about .about-content .right .chat-message {
+  max-width: 80%;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+.about .about-content .right .bot {
+  background: #555;
+  align-self: flex-start;
+}
+.about .about-content .right .user {
+  background: #0084ff;
+  align-self: flex-end;
+}
+.about .about-content .right .chat-footer {
+  display: flex;
+  border-top: 1px solid #444;
+}
+.about .about-content .right .chat-footer input {
+  flex: 1;
+  padding: 12px 25px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+.about .about-content .right .chat-footer button {
+  background: #0084ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
 }
 
 /* portfolio section styling */
@@ -907,7 +969,8 @@ section.social-media {
     margin: 25px 0;
   }
   .about .about-content .right .technologies,
-  .about .about-content .right .languages {
+  .about .about-content .right .languages,
+  .about .about-content .right .chatbot {
     margin-bottom: 25px;
   }
   .portfolio .port-content .card {
