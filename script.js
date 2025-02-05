@@ -314,8 +314,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function sendMessageToLLM() {
     try {
-      const lambdaEndpoint = "YOUR_AWS_LAMBDA_URL";
-
+      const lambdaEndpoint =
+        "https://grcw2cgu6up4yq3akrgqnv3mbe0bpylg.lambda-url.ap-southeast-1.on.aws/";
       const response = await fetch(lambdaEndpoint, {
         method: "POST",
         headers: {
