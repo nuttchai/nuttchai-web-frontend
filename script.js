@@ -307,10 +307,11 @@ document.addEventListener("DOMContentLoaded", () => {
   function addMessage(text, sender) {
     const messageDiv = document.createElement("div");
     messageDiv.classList.add("chat-message", sender);
-    messageDiv.textContent = text;
+    messageDiv.innerHTML = text.replace(/\n/g, "<br>");
     chatBody.appendChild(messageDiv);
     chatBody.scrollTop = chatBody.scrollHeight;
   }
+
 
   async function sendMessageToLLM() {
     try {
