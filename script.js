@@ -307,7 +307,14 @@ document.addEventListener("DOMContentLoaded", () => {
   function addMessage(text, sender) {
     const messageDiv = document.createElement("div");
     messageDiv.classList.add("chat-message", sender);
-    messageDiv.innerHTML = text.replace(/\n/g, "<br>");
+    // Convert newlines (\n) to <br> for proper formatting
+    let formattedText = text.replace(/\n/g, "<br>");
+    // Convert Markdown links [text](url) to proper anchor tags <a href="url">text</a>
+    formattedText = formattedText.replace(
+      /\[([^\]]+)\]\((https?:\/\/[^\s]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+    );
+    messageDiv.innerHTML = formattedText;        
     chatBody.appendChild(messageDiv);
     chatBody.scrollTop = chatBody.scrollHeight;
   }
