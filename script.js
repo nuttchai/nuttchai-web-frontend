@@ -322,9 +322,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function sendMessageToLLM() {
     try {
-      const lambdaEndpoint =
+      const LAMBDA_ENDPOINT =
         "https://l124lppjse.execute-api.ap-southeast-1.amazonaws.com/default/nutt-personal-llm";
-      const response = await fetch(lambdaEndpoint, {
+      
+      const response = await fetch(LAMBDA_ENDPOINT, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
