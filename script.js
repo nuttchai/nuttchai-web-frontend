@@ -149,7 +149,7 @@ $(document).ready(function () {
     strings: [
       "Software Engineer.",
       "Machine Learning Engineer.",
-      "Master's Student!",
+      "PhD Student!",
     ],
     startDelay: 300,
     backDelay: 750,
