@@ -584,6 +584,9 @@ section .title::after {
 .portfolio .port-content .card:hover .hospital-in-bed.title::after {
   content: "04/2022";
 }
+.portfolio .port-content .card:hover .a1ce.title::after {
+  content: "2022";
+}
 .portfolio .port-content .card:hover .nong-sampeng.title::after {
   content: "10/2021";
 }
